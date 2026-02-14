@@ -23,26 +23,26 @@
 
 ### 1.3 Модуль пользователей (Users)
 
-- [ ] Создать модуль: `nest g module users`
-- [ ] Создать сущность `User` (`id`, `email`, `password`, `name`, `role`, `createdAt`, `updatedAt`)
-- [ ] Enum для ролей: `UserRole { ADMIN = 'admin', EDITOR = 'editor' }`
-- [ ] Создать сервис `UsersService` с методами:
-  - [ ] `findAll()` — получить всех пользователей
-  - [ ] `findById(id)` — найти по ID
-  - [ ] `findByEmail(email)` — найти по email (для auth)
-  - [ ] `create(dto)` — создать пользователя
-  - [ ] `update(id, dto)` — обновить пользователя
-  - [ ] `remove(id)` — удалить пользователя
-- [ ] Создать DTO:
-  - [ ] `CreateUserDto` (`email`, `password`, `name`, `role`)
-  - [ ] `UpdateUserDto` (PartialType от CreateUserDto)
-- [ ] Создать контроллер `UsersController`:
-  - [ ] `GET /api/users` — список (защищённый, только admin)
-  - [ ] `GET /api/users/:id` — по ID
-  - [ ] `POST /api/users` — создание
-  - [ ] `PATCH /api/users/:id` — обновление
-  - [ ] `DELETE /api/users/:id` — удаление
-- [ ] Хеширование паролей через `bcrypt` (установить `bcrypt`, `@types/bcrypt`)
+- [x] Создать модуль: `nest g module users`
+- [x] Создать сущность `User` (`id`, `email`, `password`, `name`, `role`, `createdAt`, `updatedAt`)
+- [x] Enum для ролей: `UserRole { ADMIN = 'admin', EDITOR = 'editor' }`
+- [x] Создать сервис `UsersService` с методами:
+  - [x] `findAll()` — получить всех пользователей
+  - [x] `findById(id)` — найти по ID
+  - [x] `findByEmail(email)` — найти по email (для auth)
+  - [x] `create(dto)` — создать пользователя
+  - [x] `update(id, dto)` — обновить пользователя
+  - [x] `remove(id)` — удалить пользователя
+- [x] Создать DTO:
+  - [x] `CreateUserDto` (`email`, `password`, `name`, `role`)
+  - [x] `UpdateUserDto` (PartialType от CreateUserDto)
+- [x] Создать контроллер `UsersController`:
+  - [x] `GET /api/users` — список (защищённый, только admin)
+  - [x] `GET /api/users/:id` — по ID
+  - [x] `POST /api/users` — создание
+  - [x] `PATCH /api/users/:id` — обновление
+  - [x] `DELETE /api/users/:id` — удаление
+- [x] Хеширование паролей через `bcrypt` (установить `bcrypt`, `@types/bcrypt`)
 
 ### 1.4 Модуль аутентификации (Auth)
 
