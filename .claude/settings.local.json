@@ -5,7 +5,10 @@
       "Bash(npm run build:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(nest g resource:*)"
+      "Bash(nest g resource:*)",
+      "Bash(nest g module:*)",
+      "Bash(nest g service:*)",
+      "Bash(nest g controller:*)"
     ]
   }
 }

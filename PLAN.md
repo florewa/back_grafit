@@ -46,26 +46,26 @@
 
 ### 1.4 Модуль аутентификации (Auth)
 
-- [ ] Установить `@nestjs/jwt`, `@nestjs/passport`, `passport`, `passport-jwt`, `passport-local`
-- [ ] Создать модуль: `nest g module auth`
-- [ ] Создать `AuthService`:
-  - [ ] `validateUser(email, password)` — проверка credentials
-  - [ ] `login(user)` — генерация JWT-токена
-  - [ ] `getProfile(userId)` — получение профиля текущего пользователя
-- [ ] Создать `AuthController`:
-  - [ ] `POST /api/auth/login` — логин, возвращает `{ accessToken }`
-  - [ ] `GET /api/auth/profile` — профиль текущего пользователя (защищённый)
-- [ ] Создать DTO:
-  - [ ] `LoginDto` (`email`, `password`)
-- [ ] Создать стратегии Passport:
-  - [ ] `LocalStrategy` — валидация email/password
-  - [ ] `JwtStrategy` — валидация JWT-токена из заголовка Authorization
-- [ ] Создать Guards:
-  - [ ] `LocalAuthGuard` — для логина
-  - [ ] `JwtAuthGuard` — для защиты роутов
-  - [ ] `RolesGuard` — проверка роли пользователя
-- [ ] Создать декоратор `@Roles(...roles)` для указания допустимых ролей на эндпоинтах
-- [ ] Создать декоратор `@CurrentUser()` для извлечения пользователя из request
+- [x] Установить `@nestjs/jwt`, `@nestjs/passport`, `passport`, `passport-jwt`, `passport-local`
+- [x] Создать модуль: `nest g module auth`
+- [x] Создать `AuthService`:
+  - [x] `validateUser(email, password)` — проверка credentials
+  - [x] `login(user)` — генерация JWT-токена
+  - [x] `getProfile(userId)` — получение профиля текущего пользователя
+- [x] Создать `AuthController`:
+  - [x] `POST /api/auth/login` — логин, возвращает `{ accessToken }`
+  - [x] `GET /api/auth/profile` — профиль текущего пользователя (защищённый)
+- [x] Создать DTO:
+  - [x] `LoginDto` (`email`, `password`)
+- [x] Создать стратегии Passport:
+  - [x] `LocalStrategy` — валидация email/password
+  - [x] `JwtStrategy` — валидация JWT-токена из заголовка Authorization
+- [x] Создать Guards:
+  - [x] `LocalAuthGuard` — для логина
+  - [x] `JwtAuthGuard` — для защиты роутов
+  - [x] `RolesGuard` — проверка роли пользователя
+- [x] Создать декоратор `@Roles(...roles)` для указания допустимых ролей на эндпоинтах
+- [x] Создать декоратор `@CurrentUser()` для извлечения пользователя из request
 
 ---
 
