@@ -39,6 +39,15 @@ npm run test:debug             # Debug tests
 # Code Quality
 npm run lint                   # ESLint with auto-fix
 npm run format                 # Prettier formatting
+
+# Database Migrations
+npm run migration:generate src/database/migrations/MigrationName  # Generate migration from entities
+npm run migration:create src/database/migrations/MigrationName    # Create empty migration
+npm run migration:run          # Run pending migrations
+npm run migration:revert       # Revert last migration
+
+# Database Seeds
+npm run seed:admin             # Seed admin user (requires User entity)
 ```
 
 ## Architecture

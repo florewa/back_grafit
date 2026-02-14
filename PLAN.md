@@ -14,12 +14,12 @@
 
 ### 1.2 Подключение базы данных (PostgreSQL + TypeORM)
 
-- [ ] Установить `@nestjs/typeorm`, `typeorm`, `pg`
-- [ ] Настроить `TypeOrmModule.forRootAsync()` в `AppModule` с чтением конфига из `ConfigService`
-- [ ] Включить `synchronize: true` для dev-окружения (в production — `false`)
-- [ ] Создать `src/database/` директорию для будущих миграций и сидов
-- [ ] Настроить `typeorm` CLI (файл `data-source.ts`) для запуска миграций вручную
-- [ ] Написать первый seed-скрипт: создание admin-пользователя
+- [x] Установить `@nestjs/typeorm`, `typeorm`, `pg`
+- [x] Настроить `TypeOrmModule.forRootAsync()` в `AppModule` с чтением конфига из `ConfigService`
+- [x] Включить `synchronize: true` для dev-окружения (в production — `false`)
+- [x] Создать `src/database/` директорию для будущих миграций и сидов
+- [x] Настроить `typeorm` CLI (файл `data-source.ts`) для запуска миграций вручную
+- [x] Написать первый seed-скрипт: создание admin-пользователя
 
 ### 1.3 Модуль пользователей (Users)
 
