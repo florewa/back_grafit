@@ -73,31 +73,35 @@
 
 ### 2.1 Модуль категорий (Categories)
 
-- [ ] Создать модуль: `nest g module categories`
-- [ ] Создать сущность `Category`:
-  - [ ] `id` (UUID, primary)
-  - [ ] `name` (string)
-  - [ ] `slug` (string, unique) — для URL
-  - [ ] `description` (string, nullable)
-  - [ ] `sortOrder` (number, default 0)
-  - [ ] `isActive` (boolean, default true)
-  - [ ] `createdAt`, `updatedAt`
-- [ ] Связь: `Category` → `Project[]` (one-to-many)
-- [ ] Создать `CategoriesService`:
-  - [ ] `findAll()` — все категории
-  - [ ] `findBySlug(slug)` — по slug
-  - [ ] `create(dto)` — создание
-  - [ ] `update(id, dto)` — обновление
-  - [ ] `remove(id)` — удаление (проверить, нет ли привязанных проектов)
-- [ ] Создать DTO:
-  - [ ] `CreateCategoryDto` (`name`, `slug`, `description?`, `sortOrder?`)
-  - [ ] `UpdateCategoryDto`
-- [ ] Создать контроллер `CategoriesController`:
-  - [ ] `GET /api/categories` — публичный список активных категорий
-  - [ ] `GET /api/admin/categories` — полный список для админки (защищённый)
-  - [ ] `POST /api/admin/categories` — создание (защищённый)
-  - [ ] `PATCH /api/admin/categories/:id` — обновление (защищённый)
-  - [ ] `DELETE /api/admin/categories/:id` — удаление (защищённый)
+- [x] Создать модуль: `nest g module categories`
+- [x] Создать сущность `Category`:
+  - [x] `id` (UUID, primary)
+  - [x] `name` (string)
+  - [x] `slug` (string, unique) — для URL
+  - [x] `description` (string, nullable)
+  - [x] `sortOrder` (number, default 0)
+  - [x] `isActive` (boolean, default true)
+  - [x] `createdAt`, `updatedAt`
+- [x] Связь: `Category` → `Project[]` (one-to-many) - будет добавлена при создании модуля Projects
+- [x] Создать `CategoriesService`:
+  - [x] `findAll()` — все активные категории
+  - [x] `findAllForAdmin()` — все категории для админки
+  - [x] `findBySlug(slug)` — по slug
+  - [x] `findById(id)` — по ID
+  - [x] `create(dto)` — создание
+  - [x] `update(id, dto)` — обновление
+  - [x] `remove(id)` — удаление (проверка проектов будет добавлена позже)
+- [x] Создать DTO:
+  - [x] `CreateCategoryDto` (`name`, `slug`, `description?`, `sortOrder?`)
+  - [x] `UpdateCategoryDto`
+- [x] Создать контроллер `CategoriesController`:
+  - [x] `GET /api/categories` — публичный список активных категорий
+  - [x] `GET /api/categories/slug/:slug` — публичное получение по slug
+  - [x] `GET /api/categories/admin/all` — полный список для админки (защищённый)
+  - [x] `GET /api/categories/admin/:id` — по ID (защищённый)
+  - [x] `POST /api/categories/admin` — создание (защищённый)
+  - [x] `PATCH /api/categories/admin/:id` — обновление (защищённый)
+  - [x] `DELETE /api/categories/admin/:id` — удаление (защищённый)
 
 ### 2.2 Модуль проектов (Projects / Portfolio)
 
