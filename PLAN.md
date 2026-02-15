@@ -227,25 +227,25 @@
 
 ### 3.2 Swagger-документация
 
-- [ ] Установить `@nestjs/swagger`
-- [ ] Подключить `SwaggerModule.setup()` в `main.ts` на роут `/api/docs`
-- [ ] Добавить `@ApiTags()` ко всем контроллерам
-- [ ] Добавить `@ApiProperty()` ко всем DTO
-- [ ] Добавить `@ApiBearerAuth()` к защищённым эндпоинтам
-- [ ] Добавить `@ApiOperation()` и `@ApiResponse()` к ключевым эндпоинтам
+- [x] Установить `@nestjs/swagger`
+- [x] Подключить `SwaggerModule.setup()` в `main.ts` на роут `/api/docs`
+- [x] Добавить `@ApiTags()` ко всем контроллерам
+- [x] Добавить `@ApiProperty()` ко всем DTO
+- [x] Добавить `@ApiBearerAuth()` к защищённым эндпоинтам
+- [x] Добавить `@ApiOperation()` и `@ApiResponse()` к ключевым эндпоинтам
 
 ### 3.3 Логирование и обработка ошибок
 
-- [ ] Создать глобальный `HttpExceptionFilter` — единообразный формат ошибок
-- [ ] Создать `TransformInterceptor` — единообразный формат ответов `{ data, meta }`
-- [ ] Настроить встроенный NestJS Logger
-- [ ] Логирование входящих запросов (middleware или interceptor)
+- [x] Создать глобальный `HttpExceptionFilter` — единообразный формат ошибок
+- [x] Создать `TransformInterceptor` — единообразный формат ответов `{ success, data, timestamp }`
+- [x] Настроить встроенный NestJS Logger
+- [x] Логирование входящих запросов (`LoggerMiddleware` с методом, URL, статусом, временем)
 
 ### 3.4 Общие утилиты
 
-- [ ] Создать `PaginationDto` — базовый DTO для пагинации (`page`, `limit`)
-- [ ] Создать `PaginatedResponseDto<T>` — обёртка ответа с мета-данными (`items`, `total`, `page`, `lastPage`)
-- [ ] Создать утилиту `slugify` — генерация slug из строки (транслитерация кириллицы)
+- [x] Создать `PaginationDto` — базовый DTO для пагинации (`page`, `limit`)
+- [x] Создать `PaginatedResponseDto<T>` — обёртка ответа с мета-данными (`items`, `total`, `page`, `limit`, `totalPages`)
+- [x] Создать утилиту `slugify` — генерация slug из строки (транслитерация кириллицы)
 
 ---
 
