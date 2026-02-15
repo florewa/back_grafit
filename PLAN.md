@@ -105,48 +105,48 @@
 
 ### 2.2 Модуль проектов (Projects / Portfolio)
 
-- [ ] Создать модуль: `nest g module projects`
-- [ ] Создать сущность `Project`:
-  - [ ] `id` (UUID, primary)
-  - [ ] `title` (string)
-  - [ ] `slug` (string, unique)
-  - [ ] `description` (text)
-  - [ ] `shortDescription` (string, nullable) — краткое описание для карточек
-  - [ ] `client` (string, nullable) — название клиента/заказчика
-  - [ ] `year` (number, nullable) — год реализации
-  - [ ] `location` (string, nullable) — город / адрес
-  - [ ] `area` (string, nullable) — площадь (для проектных компаний часто актуально)
-  - [ ] `coverImage` (string, nullable) — путь к обложке
-  - [ ] `images` (json/array) — массив путей к изображениям
-  - [ ] `isPublished` (boolean, default false)
-  - [ ] `publishedAt` (timestamp, nullable)
-  - [ ] `sortOrder` (number, default 0)
-  - [ ] `categoryId` (FK → Category)
-  - [ ] `createdAt`, `updatedAt`
-- [ ] Связь: `Project` → `Category` (many-to-one)
-- [ ] Создать `ProjectsService`:
-  - [ ] `findAllPublished(query)` — публичный список с пагинацией и фильтром по категории
-  - [ ] `findAll(query)` — список для админки (включая черновики)
-  - [ ] `findBySlug(slug)` — по slug (публичный)
-  - [ ] `findById(id)` — по ID (для админки)
-  - [ ] `create(dto)` — создание
-  - [ ] `update(id, dto)` — обновление
-  - [ ] `remove(id)` — удаление
-  - [ ] `publish(id)` / `unpublish(id)` — управление публикацией
-- [ ] Создать DTO:
-  - [ ] `CreateProjectDto`
-  - [ ] `UpdateProjectDto`
-  - [ ] `ProjectQueryDto` — фильтры: `categoryId?`, `page?`, `limit?`, `search?`
-- [ ] Создать контроллер `ProjectsController`:
-  - [ ] `GET /api/projects` — публичный список опубликованных (с пагинацией)
-  - [ ] `GET /api/projects/:slug` — публичный просмотр проекта
-  - [ ] `GET /api/admin/projects` — список для админки (защищённый)
-  - [ ] `GET /api/admin/projects/:id` — детали для админки (защищённый)
-  - [ ] `POST /api/admin/projects` — создание (защищённый)
-  - [ ] `PATCH /api/admin/projects/:id` — обновление (защищённый)
-  - [ ] `DELETE /api/admin/projects/:id` — удаление (защищённый)
-  - [ ] `PATCH /api/admin/projects/:id/publish` — опубликовать (защищённый)
-  - [ ] `PATCH /api/admin/projects/:id/unpublish` — снять с публикации (защищённый)
+- [x] Создать модуль: `nest g module projects`
+- [x] Создать сущность `Project`:
+  - [x] `id` (UUID, primary)
+  - [x] `title` (string)
+  - [x] `slug` (string, unique)
+  - [x] `description` (text)
+  - [x] `shortDescription` (string, nullable) — краткое описание для карточек
+  - [x] `client` (string, nullable) — название клиента/заказчика
+  - [x] `year` (number, nullable) — год реализации
+  - [x] `location` (string, nullable) — город / адрес
+  - [x] `area` (string, nullable) — площадь (для проектных компаний часто актуально)
+  - [x] `coverImage` (string, nullable) — путь к обложке
+  - [x] `images` (json/array) — массив путей к изображениям
+  - [x] `isPublished` (boolean, default false)
+  - [x] `publishedAt` (timestamp, nullable)
+  - [x] `sortOrder` (number, default 0)
+  - [x] `categoryId` (FK → Category)
+  - [x] `createdAt`, `updatedAt`
+- [x] Связь: `Project` → `Category` (many-to-one)
+- [x] Создать `ProjectsService`:
+  - [x] `findAllPublished(query)` — публичный список с пагинацией и фильтром по категории
+  - [x] `findAll(query)` — список для админки (включая черновики)
+  - [x] `findBySlug(slug)` — по slug (публичный)
+  - [x] `findById(id)` — по ID (для админки)
+  - [x] `create(dto)` — создание
+  - [x] `update(id, dto)` — обновление
+  - [x] `remove(id)` — удаление
+  - [x] `publish(id)` / `unpublish(id)` — управление публикацией
+- [x] Создать DTO:
+  - [x] `CreateProjectDto`
+  - [x] `UpdateProjectDto`
+  - [x] `ProjectQueryDto` — фильтры: `categoryId?`, `page?`, `limit?`, `search?`
+- [x] Создать контроллер `ProjectsController`:
+  - [x] `GET /api/projects` — публичный список опубликованных (с пагинацией)
+  - [x] `GET /api/projects/slug/:slug` — публичный просмотр проекта
+  - [x] `GET /api/projects/admin/all` — список для админки (защищённый)
+  - [x] `GET /api/projects/admin/:id` — детали для админки (защищённый)
+  - [x] `POST /api/projects/admin` — создание (защищённый)
+  - [x] `PATCH /api/projects/admin/:id` — обновление (защищённый)
+  - [x] `DELETE /api/projects/admin/:id` — удаление (защищённый)
+  - [x] `PATCH /api/projects/admin/:id/publish` — опубликовать (защищённый)
+  - [x] `PATCH /api/projects/admin/:id/unpublish` — снять с публикации (защищённый)
 
 ### 2.3 Модуль загрузки файлов (Upload)
 
