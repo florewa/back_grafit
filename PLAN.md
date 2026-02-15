@@ -170,33 +170,24 @@
 - [x] Настроить раздачу статики: `ServeStaticModule` для `/uploads`
 - [x] Ограничения: максимальный размер файла 10MB, допустимые mime-types (jpeg, png, webp)
 
-### 2.4 Модуль страниц (Pages)
+### 2.4 Модуль настроек контактов (Contact Settings)
 
-- [ ] Создать модуль: `nest g module pages`
-- [ ] Создать сущность `Page`:
-  - [ ] `id` (UUID, primary)
-  - [ ] `slug` (string, unique) — идентификатор страницы (`about`, `contacts`, `home`)
-  - [ ] `title` (string)
-  - [ ] `content` (text) — HTML или Markdown-контент
-  - [ ] `metaTitle` (string, nullable) — SEO
-  - [ ] `metaDescription` (string, nullable) — SEO
-  - [ ] `isActive` (boolean, default true)
-  - [ ] `createdAt`, `updatedAt`
-- [ ] Создать `PagesService`:
-  - [ ] `findAll()` — все страницы
-  - [ ] `findBySlug(slug)` — по slug (публичный)
-  - [ ] `create(dto)` — создание
-  - [ ] `update(id, dto)` — обновление
-- [ ] Создать DTO:
-  - [ ] `CreatePageDto`
-  - [ ] `UpdatePageDto`
-- [ ] Создать контроллер `PagesController`:
-  - [ ] `GET /api/pages/:slug` — публичное получение страницы
-  - [ ] `GET /api/admin/pages` — список для админки (защищённый)
-  - [ ] `GET /api/admin/pages/:id` — детали (защищённый)
-  - [ ] `POST /api/admin/pages` — создание (защищённый)
-  - [ ] `PATCH /api/admin/pages/:id` — обновление (защищённый)
-- [ ] Seed: создать начальные страницы (`home`, `about`, `contacts`)
+- [x] Создать модуль: `nest g module contact-settings`
+- [x] Создать сущность `ContactSettings`:
+  - [x] `id` (UUID, primary)
+  - [x] `phone` (string, nullable) — номер телефона
+  - [x] `email` (string, nullable) — email
+  - [x] `address` (text, nullable) — адрес
+  - [x] `createdAt`, `updatedAt`
+- [x] Создать `ContactSettingsService`:
+  - [x] `get()` — получить настройки (создаёт если не существует)
+  - [x] `update(dto)` — обновить настройки
+- [x] Создать DTO:
+  - [x] `UpdateContactSettingsDto`
+- [x] Создать контроллер `ContactSettingsController`:
+  - [x] `GET /api/contact-settings` — публичное получение настроек
+  - [x] `PATCH /api/contact-settings` — обновление (Admin/Editor)
+- [x] Seed: создать начальные настройки контактов
 
 ---
 

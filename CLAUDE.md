@@ -48,6 +48,7 @@ npm run migration:revert       # Revert last migration
 
 # Database Seeds
 npm run seed:admin             # Seed admin user (requires User entity)
+npm run seed:contacts          # Seed initial contact settings (phone, email, address)
 ```
 
 ## Architecture

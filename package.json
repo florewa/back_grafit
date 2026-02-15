@@ -23,7 +23,8 @@
     "migration:create": "npm run typeorm -- migration:create",
     "migration:run": "npm run typeorm -- migration:run",
     "migration:revert": "npm run typeorm -- migration:revert",
-    "seed:admin": "ts-node src/database/seeds/admin.seed.ts"
+    "seed:admin": "ts-node src/database/seeds/admin.seed.ts",
+    "seed:contacts": "ts-node src/database/seeds/contact-settings.seed.ts"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",

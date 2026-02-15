@@ -10,6 +10,7 @@ import { AuthModule } from './auth/auth.module';
 import { CategoriesModule } from './categories/categories.module';
 import { ProjectsModule } from './projects/projects.module';
 import { UploadModule } from './upload/upload.module';
+import { ContactSettingsModule } from './contact-settings/contact-settings.module';
 
 @Module({
   imports: [
@@ -41,6 +42,7 @@ import { UploadModule } from './upload/upload.module';
     CategoriesModule,
     ProjectsModule,
     UploadModule,
+    ContactSettingsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
