@@ -150,22 +150,25 @@
 
 ### 2.3 Модуль загрузки файлов (Upload)
 
-- [ ] Установить `multer`, `@types/multer`
-- [ ] Установить `sharp` для обработки изображений
-- [ ] Создать модуль: `nest g module upload`
-- [ ] Настроить хранение файлов:
-  - [ ] Локальное хранилище: директория `uploads/` с поддиректориями по типу (`projects/`, `pages/`)
-  - [ ] Опционально: подготовить интерфейс для S3-совместимого хранилища
-- [ ] Создать `UploadService`:
-  - [ ] `uploadImage(file, folder)` — сохранение файла + генерация thumbnail
-  - [ ] `removeFile(filePath)` — удаление файла
-  - [ ] `generateThumbnail(filePath, width, height)` — создание превью через sharp
-- [ ] Создать контроллер `UploadController`:
-  - [ ] `POST /api/admin/upload/image` — загрузка одного изображения (защищённый)
-  - [ ] `POST /api/admin/upload/images` — загрузка нескольких изображений (защищённый)
-  - [ ] `DELETE /api/admin/upload/:filename` — удаление файла (защищённый)
-- [ ] Настроить раздачу статики: `ServeStaticModule` или express.static для `/uploads`
-- [ ] Ограничения: максимальный размер файла, допустимые mime-types (jpg, png, webp)
+- [x] Установить `multer`, `@types/multer`
+- [x] Установить `sharp` для обработки изображений
+- [x] Создать модуль: `nest g module upload`
+- [x] Настроить хранение файлов:
+  - [x] Локальное хранилище: директория `uploads/` с поддиректориями по типу (`projects/`, `pages/`, `thumbnails/`)
+- [x] Создать `UploadService`:
+  - [x] `uploadImage(file, folder)` — сохранение файла + генерация thumbnail
+  - [x] `uploadMultipleImages(files, folder)` — сохранение нескольких файлов
+  - [x] `removeFile(filePath)` — удаление файла и его thumbnail
+  - [x] `generateThumbnail(filePath, width, height)` — создание превью 300x300 через sharp
+  - [x] Автоматическое создание директорий при старте
+  - [x] Валидация типа файла (jpeg, png, webp)
+  - [x] Валидация размера файла (максимум 10MB)
+- [x] Создать контроллер `UploadController`:
+  - [x] `POST /api/upload/image` — загрузка одного изображения (защищённый)
+  - [x] `POST /api/upload/images` — загрузка до 10 изображений (защищённый)
+  - [x] `DELETE /api/upload` — удаление файла (защищённый)
+- [x] Настроить раздачу статики: `ServeStaticModule` для `/uploads`
+- [x] Ограничения: максимальный размер файла 10MB, допустимые mime-types (jpeg, png, webp)
 
 ### 2.4 Модуль страниц (Pages)
 
