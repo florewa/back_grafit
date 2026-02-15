@@ -11,6 +11,7 @@ import { CategoriesModule } from './categories/categories.module';
 import { ProjectsModule } from './projects/projects.module';
 import { UploadModule } from './upload/upload.module';
 import { ContactSettingsModule } from './contact-settings/contact-settings.module';
+import { ContactsModule } from './contacts/contacts.module';
 
 @Module({
   imports: [
@@ -43,6 +44,7 @@ import { ContactSettingsModule } from './contact-settings/contact-settings.modul
     ProjectsModule,
     UploadModule,
     ContactSettingsModule,
+    ContactsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

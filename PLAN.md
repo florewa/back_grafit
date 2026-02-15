@@ -195,28 +195,35 @@
 
 ### 3.1 Модуль обратной связи (Contacts / Leads)
 
-- [ ] Создать модуль: `nest g module contacts`
-- [ ] Создать сущность `ContactRequest`:
-  - [ ] `id` (UUID, primary)
-  - [ ] `name` (string)
-  - [ ] `email` (string)
-  - [ ] `phone` (string, nullable)
-  - [ ] `message` (text)
-  - [ ] `isRead` (boolean, default false)
-  - [ ] `createdAt`
-- [ ] Создать `ContactsService`:
-  - [ ] `create(dto)` — сохранение заявки
-  - [ ] `findAll(query)` — список заявок с пагинацией (для админки)
-  - [ ] `markAsRead(id)` — отметить как прочитанную
-  - [ ] `remove(id)` — удалить заявку
-- [ ] Создать DTO:
-  - [ ] `CreateContactDto` (`name`, `email`, `phone?`, `message`) с валидацией
-- [ ] Создать контроллер `ContactsController`:
-  - [ ] `POST /api/contacts` — публичная отправка заявки
-  - [ ] `GET /api/admin/contacts` — список заявок (защищённый)
-  - [ ] `PATCH /api/admin/contacts/:id/read` — отметить прочитанной (защищённый)
-  - [ ] `DELETE /api/admin/contacts/:id` — удалить (защищённый)
-- [ ] Опционально: настроить отправку email-уведомлений (nodemailer) при новой заявке
+- [x] Создать модуль: `nest g module contacts`
+- [x] Создать сущность `ContactRequest`:
+  - [x] `id` (UUID, primary)
+  - [x] `name` (string)
+  - [x] `email` (string)
+  - [x] `phone` (string, nullable)
+  - [x] `message` (text)
+  - [x] `isRead` (boolean, default false)
+  - [x] `createdAt`
+- [x] Создать `ContactsService`:
+  - [x] `create(dto)` — сохранение заявки
+  - [x] `findAll(query)` — список заявок с пагинацией (для админки)
+  - [x] `markAsRead(id)` / `markAsUnread(id)` — управление статусом прочитанности
+  - [x] `remove(id)` — удалить заявку
+- [x] Создать DTO:
+  - [x] `CreateContactDto` (`name`, `email`, `phone?`, `message`) с валидацией
+  - [x] `ContactQueryDto` — фильтры для админки (`page`, `limit`, `isRead`)
+- [x] Создать контроллер `ContactsController`:
+  - [x] `POST /api/contacts` — публичная отправка заявки
+  - [x] `GET /api/contacts/admin` — список заявок (защищённый)
+  - [x] `GET /api/contacts/admin/:id` — детали заявки (защищённый)
+  - [x] `PATCH /api/contacts/admin/:id/read` — отметить прочитанной (защищённый)
+  - [x] `PATCH /api/contacts/admin/:id/unread` — отметить непрочитанной (защищённый)
+  - [x] `DELETE /api/contacts/admin/:id` — удалить (защищённый)
+- [x] Создать `NotificationService`:
+  - [x] Отправка уведомлений в Telegram Bot API при новой заявке
+  - [x] Форматирование сообщений с HTML-разметкой
+  - [x] Настройка через .env (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`)
+  - [ ] Email-уведомления (nodemailer) — TODO
 
 ### 3.2 Swagger-документация
 
